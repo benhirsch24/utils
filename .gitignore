@@ -30,3 +30,8 @@
 
 *~
 ./bin/*
+bin/*
+
+./imgutils/testimgs
+
+.*.swp
