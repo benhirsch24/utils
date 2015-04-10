@@ -1,6 +1,6 @@
 IMG = ./imgutils
 BIN = ./bin
-UTILS = planetoppm colorconv ppmheader
+UTILS = planetoppm colorconv ppmheader uninterleave
 
 bin:
 	mkdir -p ./bin
@@ -13,6 +13,9 @@ colorconv: bin $(IMG)/colorconv.c
 
 ppmheader: bin $(IMG)/ppmheader.c
 	gcc -O3 $(IMG)/ppmheader.c -o $(BIN)/ppmheader
+
+uninterleave: bin $(IMG)/uninterleave.c
+	gcc -O3 $(IMG)/uninterleave.c -o $(BIN)/uninterleave
 
 clean:
 	rm $(BIN)/*
